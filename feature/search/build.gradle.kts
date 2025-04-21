@@ -7,7 +7,7 @@ plugins {
 }
 
 android {
-    namespace = "com.smparkworld.feature.mypage"
+    namespace = "com.smparkworld.feature.search"
 }
 apply(from = rootProject.file("core-android-build.gradle"))
 
@@ -20,16 +20,10 @@ dependencies {
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
 
-    implementation(libs.activity.ktx)
-    implementation(libs.fragment.ktx)
-    implementation(libs.lifecycle.viewmodel.ktx)
-    implementation(libs.lifecycle.runtime.ktx)
-
-    implementation(libs.kotlin.reflect)
-    implementation(libs.bundles.compose)
-
     implementation(libs.hilt.android)
     kapt(libs.hilt.compiler)
+
+    implementation(libs.bundles.compose)
 
     testImplementation(libs.junit)
 

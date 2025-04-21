@@ -28,3 +28,4 @@ include(":common:base")
 include(":common:datamodel")
 
 include(":feature:mypage")
+include(":feature:search")
