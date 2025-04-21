@@ -1,0 +1,32 @@
+def isLibraryPlugin = pluginManager.hasPlugin("com.android.library")
+def isApplicationPlugin = pluginManager.hasPlugin("com.android.application")
+
+if (isLibraryPlugin || isApplicationPlugin) {
+    android {
+        compileSdkVersion 35
+
+        defaultConfig {
+            minSdkVersion 24
+            targetSdkVersion 35
+
+            testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+            consumerProguardFiles "consumer-rules.pro"
+        }
+        buildTypes {
+            release {
+                minifyEnabled false
+                proguardFiles getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro"
+            }
+        }
+        compileOptions {
+            sourceCompatibility JavaVersion.VERSION_11
+            targetCompatibility JavaVersion.VERSION_11
+        }
+        kotlinOptions {
+            jvmTarget = "11"
+        }
+        buildFeatures {
+            dataBinding true
+        }
+    }
+}

@@ -5,8 +5,8 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.smparkworld.common.base.recyclerview.SectionViewBinder
 import com.smparkworld.feature.mypage.ui.base.MyPageViewHolder
-import com.smparkworld.mypage.R
-import com.smparkworld.mypage.databinding.ItemMyPageProductsBinding
+import com.smparkworld.feature.mypage.R
+import com.smparkworld.feature.mypage.databinding.ItemMyPageProductsBinding
 
 class ProductsViewBinder
     : SectionViewBinder<ProductsUiModel, ProductsViewHolder>(ProductsUiModel::class) {

@@ -7,8 +7,8 @@ import androidx.databinding.DataBindingUtil
 import com.smparkworld.common.base.extensions.collectAt
 import com.smparkworld.feature.mypage.ui.base.MyPageViewType
 import com.smparkworld.feature.mypage.ui.base.addItemDecorations
-import com.smparkworld.mypage.R
-import com.smparkworld.mypage.databinding.ActivityMyPageBinding
+import com.smparkworld.feature.mypage.R
+import com.smparkworld.feature.mypage.databinding.ActivityMyPageBinding
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
