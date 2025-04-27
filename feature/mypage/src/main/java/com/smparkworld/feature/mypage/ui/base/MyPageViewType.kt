@@ -32,7 +32,7 @@ enum class MyPageViewType(
 
         @JvmStatic
         @Suppress("UNCHECKED_CAST")
-        fun createMappers(): List<UiModelMapper> {
+        fun createUiModelMappers(): List<UiModelMapper> {
             return entries
                 .mapNotNull { it.mapper.defaultConstructor?.call() as? UiModelMapper }
         }

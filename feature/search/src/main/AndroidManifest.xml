@@ -3,6 +3,6 @@
 
     <application>
         <activity
-            android:name=".SearchActivity"/>
+            android:name="com.smparkworld.feature.ui.search.SearchActivity"/>
     </application>
 </manifest>

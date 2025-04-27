@@ -4,6 +4,9 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Job
+import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.launch
 import kotlin.reflect.KClass
@@ -12,6 +15,9 @@ import kotlin.reflect.full.valueParameters
 
 val <T : Any> KClass<T>.defaultConstructor: KFunction<T>?
     get() = this.constructors.firstOrNull { it.valueParameters.isEmpty() }
+
+fun <T> Channel<T>.sendAt(scope: CoroutineScope, event: T): Job =
+    scope.launch { send(event) }
 
 inline fun <T> Flow<T>.collectAt(
     owner: LifecycleOwner,

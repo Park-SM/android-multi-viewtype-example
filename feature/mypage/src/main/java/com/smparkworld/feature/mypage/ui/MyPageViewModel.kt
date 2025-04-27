@@ -40,7 +40,7 @@ class MyPageViewModel @Inject constructor(
             if (response.isSuccess) {
                 response.getOrNull()?.let { dto ->
                     _title.emit(mapper.mapTitle(dto))
-                    _items.emit(mapper.mapUiModels(dto))
+                    _items.emit(mapper.mapItemUiModels(dto))
                 }
             } else {
                 // Handle error

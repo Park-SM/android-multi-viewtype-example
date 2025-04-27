@@ -5,7 +5,7 @@ import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import com.smparkworld.feature.mypage.ui.MyPageActivity
-import com.smparkworld.feature.search.SearchActivity
+import com.smparkworld.feature.ui.search.SearchActivity
 
 class MainActivity : AppCompatActivity() {
 

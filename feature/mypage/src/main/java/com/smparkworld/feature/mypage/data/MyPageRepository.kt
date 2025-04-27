@@ -17,7 +17,7 @@ class FakeMyPageRepositoryImpl @Inject constructor(
 
     override suspend fun requestSections(): Result<MyPageResponse> {
         val response = MyPageResponse(
-            title = "파리 숙소 상품",
+            title = "Views 내 정보 화면",
             popularCities = listOf(
                 MyPagePopularCity(label = "키즈", backgroundColor = "#00EEFF"),
                 MyPagePopularCity(label = "도쿄", backgroundColor = "#EEFF00"),

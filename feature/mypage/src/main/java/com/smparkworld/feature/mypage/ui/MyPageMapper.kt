@@ -6,13 +6,13 @@ import com.smparkworld.feature.mypage.ui.base.MyPageViewType
 
 class MyPageMapper {
 
-    private val mappers = MyPageViewType.createMappers()
+    private val itemUiModelMappers = MyPageViewType.createUiModelMappers()
 
     fun mapTitle(dto: MyPageResponse): String {
         return dto.title.orEmpty()
     }
 
-    fun mapUiModels(dto: MyPageResponse): List<MyPageUiModel> {
-        return mappers.mapNotNull { it.mapToUiModel(dto) }
+    fun mapItemUiModels(dto: MyPageResponse): List<MyPageUiModel> {
+        return itemUiModelMappers.mapNotNull { it.mapToUiModel(dto) }
     }
 }

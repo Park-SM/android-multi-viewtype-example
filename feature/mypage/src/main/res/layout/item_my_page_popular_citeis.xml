@@ -8,7 +8,7 @@
         android:layout_height="wrap_content"
         android:paddingHorizontal="10dp"
         android:paddingVertical="12dp"
-        android:background="#FFCDD2"
+        android:background="@color/red_100"
         android:textSize="13sp"
         android:gravity="center"
         tools:text="테스트"/>

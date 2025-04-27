@@ -4,9 +4,9 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.smparkworld.common.base.recyclerview.SectionViewBinder
-import com.smparkworld.feature.mypage.ui.base.MyPageViewHolder
 import com.smparkworld.feature.mypage.R
 import com.smparkworld.feature.mypage.databinding.ItemMyPagePopularCiteisBinding
+import com.smparkworld.feature.mypage.ui.base.MyPageViewHolder
 
 class PopularCitiesViewBinder
     : SectionViewBinder<PopularCitiesUiModel, PopularCitiesViewHolder>(PopularCitiesUiModel::class) {
